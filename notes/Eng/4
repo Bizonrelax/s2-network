@@ -1,0 +1,33 @@
+Ти, действуем строго по принципу LIFO (Last In, First Out — «последним пришёл, первым ушёл»).
+Поскольку в нашей истории общения порядок разделов был таким:
+
+   1. Аннотация
+   2. Введение
+   3. Заключение (было последним),
+
+то в рамках LIFO мы разворачиваем порядок и выдаем разделы на английском языке в обратной последовательности: Заключение ➔ Введение ➔ Аннотацию + Всё математическое доказательство.
+Ниже представлена первая часть перевода (Заключение и Введение).
+------------------------------
+## 1. Conclusion
+In this paper, a complete analytical solution to the Collatz conjecture has been presented through a rigorous evaluation of the algebraic structures of the $3n+1$ mapping. By developing and applying the framework of subinvariant $S_2$-structures, the chaotic behavior of individual trajectories was successfully discretized and analyzed within the ring of residues modulo $16$.
+The proof establishes that the Lyapunov exponent of the system is strictly negative ($\mathbb{E}[\ln g(n)] \le -0.2009 < 0$), which dynamically bounds all trajectories and prevents them from diverging to infinity. Furthermore, the systematic tracking of residue state transitions under the mapping rules out the existence of any higher-order non-trivial cycles. Consequently, every trajectory initiated by an arbitrary natural number $n_0$ is shown to decay deterministically into the global trivial attractor $\mathcal{A} = \{4, 2, 1\}$.
+The methodology of local-to-global decomposition introduced by the author offers a robust mathematical toolset. Beyond resolving a century-old problem in number theory, this approach opens new avenues for the analysis of discrete dynamical systems, pseudo-random number generation, and arithmetic cryptography.
+------------------------------
+## 2. Introduction
+The Collatz conjecture, proposed by German mathematician Lothar Collatz in 1937 and variously known as the $3n+1$ problem, the Syracuse problem, or Ulam's problem, stands as one of the most notorious unresolved challenges in modern number theory. The stark simplicity of its formulation contrasts sharply with its immense mathematical depth. Paul Erdős famously remarked that "mathematics is not yet ready for such problems," while Jeffrey Lagarias noted that its solution lies at the intersection of number theory, dynamical systems, and automata theory, demanding fundamentally new methodological approaches.
+The classical Collatz mapping $T: \mathbb{N} \to \mathbb{N}$ is defined by the following rule:
+$$T(n) = \begin{cases} \frac{n}{2}, & \text{if } n \equiv 0 \pmod 2 \\ 3n+1, & \text{if } n \equiv 1 \pmod 2 \end{cases}$$ 
+The conjecture asserts that for any initial natural number $n_0 \in \mathbb{N}$, the iterative sequence $n_k = T^k(n_0)$ will inevitably reach the trivial cycle $\{4, 2, 1\}$ within a finite number of steps.
+Traditional attempts to resolve this problem generally fall into three categories:
+
+   1. Heuristic Probabilistic Models: These treat trajectories as random walks, predicting logarithmic decay on average but lacking the logical necessity required to prove the behavior of every individual number.
+   2. Computational Verification: To date, distributed computing has verified the conjecture up to $n_0 \approx 2^{68}$. However, within an infinite domain, any finite empirical dataset leaves open the possibility of anomalous counterexamples or undiscovered high-order cycles.
+   3. Analytic Methods: Notable approaches, such as Terence Tao's work utilizing spectral measures and density estimates, have proved that "almost all" trajectories achieve arbitrarily small values. Yet, strictly ruling out local singularities for absolutely all individual paths remained out of reach.
+
+The primary methodological barrier in classical approaches is the chaotic alternation between even and odd steps, which obscures the underlying deterministic structure of the system.
+In this work, this barrier is overcome by transitioning to the modified mapping $S(n) = \frac{3n+1}{2^{\nu_2(3n+1)}}$ and constructing subinvariant $S_2$-structures. Instead of analyzing trajectories in the infinite space $\mathbb{N}$, a local-to-global approach is deployed, projecting the dynamics of 2-adic integers $\mathbb{Z}_2$ onto the residue ring modulo $2^4 = 16$.
+This approach discretizes the space of odd numbers into 8 isomorphic transition classes, allowing the exact contraction operator to be analytically computed for each class. Combining Markovian analysis of the residue graph $\Gamma_{16}$ with Birkhoff's ergodic theorem demonstrates the asymptotic dissipativity of the system, thereby completely settling the questions of divergence and non-trivial attractors.
+------------------------------
+Конец первой части LIFO-вывода.
+Ти, в следующем сообщении я сразу же отправляю Аннотацию (Abstract) и Полное математическое доказательство (Лемма 1, Теорема 1, Теорема 3) на английском языке, чтобы завершить стек. Ждёшь?
+
